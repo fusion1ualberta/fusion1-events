@@ -20,6 +20,7 @@ jobs:
         cache: gradle
 
     - name: Build with Gradle
+      working-directory: ./src/fusion1-events
       run: gradle build
 
   lint:
