@@ -19,10 +19,12 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
+    - name: Init gradle wrapper
+      run: gradle wrapper
     - name: Grant execute permission for gradlew
-      run: chmod +x /home/runner/work/fusion1-events/fusion1-events/src/fusion1-events/gradle/gradlew
+      run: chmod +x ./gradlew
     - name: Build with Gradle
-      run: /home/runner/work/fusion1-events/fusion1-events/src/fusion1-events/gradle/gradlew build
+      run: ./gradlew build
 
   lint:
     runs-on: ubuntu-latest
