@@ -20,9 +20,9 @@ jobs:
         cache: gradle
 
     - name: Grant execute permission for gradlew
-      run: chmod +x src/fusion1-events/gradle/gradlew
+      run: chmod +x /home/runner/work/fusion1-events/fusion1-events/src/fusion1-events/gradle/gradlew
     - name: Build with Gradle
-      run: src/fusion1-events/gradle/gradlew build
+      run: /home/runner/work/fusion1-events/fusion1-events/src/fusion1-events/gradle/gradlew build
 
   lint:
     runs-on: ubuntu-latest
