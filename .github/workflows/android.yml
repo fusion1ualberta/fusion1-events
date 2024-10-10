@@ -26,7 +26,7 @@ jobs:
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: out
+        name: output
         path: ./src/fusion1-events/app/build/outputs/apk/**/*.apk
 
   test:
@@ -48,7 +48,7 @@ jobs:
         uses: actions/upload-artifact@v3
         if: ${{ always() }} # IMPORTANT: Upload reports regardless of status
         with:
-          name: out
+          name: output
           path: app/build/test-results # path to where the xml test results are stored
 
   lint:
