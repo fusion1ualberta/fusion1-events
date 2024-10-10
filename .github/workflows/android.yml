@@ -23,6 +23,12 @@ jobs:
       working-directory: ./src/fusion1-events
       run: gradle build
 
+    - name: Upload Build Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: output
+        path: ./src/fusion1-events/app/build/outputs/apk/**/*.apk
+
   lint:
     runs-on: ubuntu-latest
 
