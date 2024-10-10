@@ -41,6 +41,7 @@ jobs:
           cache: gradle
       
       - name: Unit Test
+        working-directory: ./src/fusion1-events
         run: gradle testDebugUnitTest
 
       - name: Upload Test Reports Folder
